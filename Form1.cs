@@ -126,5 +126,19 @@ namespace TareaAcademica5
                 dgvMasPopulares.DataSource = juegosMasJugados;
             }
         }
+
+        private void btnJuegosAZ_Click(object sender, EventArgs e)
+        {
+            List<Juego> juegosOrdenados = dbJuegos.OrderBy(j => j.Titulo).ToList();
+            dgvOrdenJuegos.DataSource = null;
+            dgvOrdenJuegos.DataSource = juegosOrdenados;
+        }
+
+        private void btnJuegosZA_Click(object sender, EventArgs e)
+        {
+            List<Juego> juegosOrdenados = dbJuegos.OrderByDescending(j => j.Titulo).ToList();
+            dgvOrdenJuegos.DataSource = null;
+            dgvOrdenJuegos.DataSource = juegosOrdenados;
+        }
     }
 }
