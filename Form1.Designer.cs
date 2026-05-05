@@ -39,6 +39,9 @@
             this.tabReportes = new System.Windows.Forms.TabPage();
             this.dgvMasPopulares = new System.Windows.Forms.DataGridView();
             this.btnJuegoTop = new System.Windows.Forms.Button();
+            this.btnJuegosAZ = new System.Windows.Forms.Button();
+            this.btnJuegosZA = new System.Windows.Forms.Button();
+            this.dgvOrdenJuegos = new System.Windows.Forms.DataGridView();
             this.dgvResultados = new System.Windows.Forms.DataGridView();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.txtFiltroDoc = new System.Windows.Forms.TextBox();
@@ -54,6 +57,7 @@
             this.tabReportes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMasPopulares)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResultados)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOrdenJuegos)).BeginInit();
             this.SuspendLayout();
 
             // Panel de Encabezado Estilo UTP/UPC
@@ -238,6 +242,9 @@
 
             // Pestaña 3: Reportes Avanzados
             this.tabReportes.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabReportes.Controls.Add(this.dgvOrdenJuegos);
+            this.tabReportes.Controls.Add(this.btnJuegosZA);
+            this.tabReportes.Controls.Add(this.btnJuegosAZ);
             this.tabReportes.Controls.Add(this.dgvMasPopulares);
             this.tabReportes.Controls.Add(this.btnJuegoTop);
             this.tabReportes.Controls.Add(this.dgvResultados);
@@ -302,6 +309,38 @@
             this.dgvMasPopulares.Size = new System.Drawing.Size(450, 410);
             this.dgvMasPopulares.TabIndex = 5;
 
+            this.btnJuegosAZ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btnJuegosAZ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnJuegosAZ.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
+            this.btnJuegosAZ.ForeColor = System.Drawing.Color.White;
+            this.btnJuegosAZ.Location = new System.Drawing.Point(500, 526);
+            this.btnJuegosAZ.Name = "btnJuegosAZ";
+            this.btnJuegosAZ.Size = new System.Drawing.Size(220, 30);
+            this.btnJuegosAZ.TabIndex = 6;
+            this.btnJuegosAZ.Text = "REPORTE A - Z";
+            this.btnJuegosAZ.UseVisualStyleBackColor = false;
+            this.btnJuegosAZ.Click += new System.EventHandler(this.btnJuegosAZ_Click);
+
+            this.btnJuegosZA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.btnJuegosZA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnJuegosZA.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
+            this.btnJuegosZA.ForeColor = System.Drawing.Color.White;
+            this.btnJuegosZA.Location = new System.Drawing.Point(730, 526);
+            this.btnJuegosZA.Name = "btnJuegosZA";
+            this.btnJuegosZA.Size = new System.Drawing.Size(220, 30);
+            this.btnJuegosZA.TabIndex = 7;
+            this.btnJuegosZA.Text = "REPORTE Z - A";
+            this.btnJuegosZA.UseVisualStyleBackColor = false;
+            this.btnJuegosZA.Click += new System.EventHandler(this.btnJuegosZA_Click);
+
+            this.dgvOrdenJuegos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvOrdenJuegos.BackgroundColor = System.Drawing.Color.White;
+            this.dgvOrdenJuegos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvOrdenJuegos.Location = new System.Drawing.Point(29, 526);
+            this.dgvOrdenJuegos.Name = "dgvOrdenJuegos";
+            this.dgvOrdenJuegos.Size = new System.Drawing.Size(430, 30);
+            this.dgvOrdenJuegos.TabIndex = 8;
+
             // Formulario Principal
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -329,6 +368,7 @@
             this.tabReportes.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMasPopulares)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResultados)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOrdenJuegos)).EndInit();
             this.ResumeLayout(false);
         }
 
@@ -360,5 +400,8 @@
         private System.Windows.Forms.DataGridView dgvResultados;
         private System.Windows.Forms.Button btnJuegoTop;
         private System.Windows.Forms.DataGridView dgvMasPopulares;
+        private System.Windows.Forms.Button btnJuegosAZ;
+        private System.Windows.Forms.Button btnJuegosZA;
+        private System.Windows.Forms.DataGridView dgvOrdenJuegos;
     }
 }
